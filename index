@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KITSCH — Independent Dance Label</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>KITSCH</h1>
+    <nav>
+      <a href="artists.html">Artists</a>
+      <a href="#">Releases</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <p>Indie Dance / Melodic Italo</p>
+    <p class="sub">Romantic. Plastic. Slightly Unreal.</p>
+  </section>
+
+  <footer>
+    <p>© 2026 KITSCH</p>
+  </footer>
+
+</body>
+</html>
