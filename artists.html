@@ -1,25 +1,106 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Artists — KITSCH</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Artists on KITSCH." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <header class="header">
+    <div class="header__inner">
+      <a class="brand" href="index.html" aria-label="KITSCH Home">
+        <img class="brand__wordmark" src="images/kitsch-wordmark.png" alt="KITSCH" />
+      </a>
 
-<header>
-  <h1>KITSCH</h1>
-  <nav>
-    <a href="index.html">Home</a>
-  </nav>
-</header>
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link nav__link--active" href="artists.html">Artists</a>
+        <a class="nav__link" href="releases.html">Releases</a>
+        <a class="nav__link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<section class="hero">
-  <div>
-    <h2>Port Manteau</h2>
-    <p>Indie dance structures with romantic Italo decay.</p>
-  </div>
-</section>
+  <main class="container">
+    <section class="pagehead">
+      <p class="eyebrow">Roster</p>
+      <h1 class="pagehead__title">Artists</h1>
+      <p class="pagehead__sub">A small list on purpose.</p>
+    </section>
 
+    <section class="section">
+      <div class="grid grid--artists">
+        <a class="artistcard" href="#port-manteau" aria-label="Port Manteau">
+          <img class="artistcard__img" src="images/port-manteau.jpg" alt="Port Manteau" />
+          <div class="artistcard__overlay">
+            <div class="tag">Artist</div>
+            <div class="artistcard__name">Port Manteau</div>
+            <div class="artistcard__meta">Indie dance / melodic Italo</div>
+          </div>
+        </a>
+
+        <!-- Duplicate this block for future artists -->
+        <!--
+        <a class="artistcard" href="#artist-2">
+          <img class="artistcard__img" src="images/artist-2.jpg" alt="Artist name" />
+          <div class="artistcard__overlay">
+            <div class="tag">Artist</div>
+            <div class="artistcard__name">Artist name</div>
+            <div class="artistcard__meta">Genre / vibe</div>
+          </div>
+        </a>
+        -->
+      </div>
+    </section>
+
+    <section id="port-manteau" class="section">
+      <div class="section__head">
+        <h2 class="section__title">Port Manteau</h2>
+        <a class="section__link" href="contact.html">Bookings / promo →</a>
+      </div>
+
+      <div class="bio">
+        <div class="bio__media">
+          <img class="bio__img" src="images/port-manteau.jpg" alt="Port Manteau in the studio" />
+        </div>
+
+        <div class="bio__text">
+          <div class="tag tag--outline">KITSCH artist</div>
+          <h3 class="bio__title">Romantic machinery.</h3>
+          <p class="bio__p">
+            Indie dance structures with melodic Italo intent. Studio-forward, hook-aware, a little ironic.
+          </p>
+
+          <div class="bio__links">
+            <a class="btn btn--small" href="#" target="_blank" rel="noreferrer">Spotify</a>
+            <a class="btn btn--small btn--ghost" href="#" target="_blank" rel="noreferrer">SoundCloud</a>
+            <a class="btn btn--small btn--ghost" href="#" target="_blank" rel="noreferrer">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__left">
+          <div class="footer__mark">KITSCH</div>
+          <div class="footer__muted">Indie Dance / Melodic Italo</div>
+        </div>
+
+        <div class="footer__right">
+          <a class="footer__link" href="contact.html">Email</a>
+          <a class="footer__link" href="#" aria-label="Instagram">Instagram</a>
+          <a class="footer__link" href="#" aria-label="SoundCloud">SoundCloud</a>
+        </div>
+      </div>
+      <div class="footer__bottom">© <span id="year"></span> KITSCH</div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
