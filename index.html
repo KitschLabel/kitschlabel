@@ -1,31 +1,126 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <title>KITSCH — Independent Dance Label</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KITSCH — Indie Dance / Melodic Italo</title>
+  <meta name="description" content="KITSCH — Indie dance / melodic Italo. Slightly ironic." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <header class="header">
+    <div class="header__inner">
+      <a class="brand" href="index.html" aria-label="KITSCH Home">
+        <img class="brand__wordmark" src="images/kitsch-wordmark.png" alt="KITSCH" />
+      </a>
 
-  <header>
-    <h1>KITSCH</h1>
-    <nav>
-      <a href="artists.html">Artists</a>
-      <a href="#">Releases</a>
-      <a href="#">Contact</a>
-    </nav>
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link" href="artists.html">Artists</a>
+        <a class="nav__link" href="releases.html">Releases</a>
+        <a class="nav__link" href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero">
-    <p>Indie Dance / Melodic Italo</p>
-    <p class="sub">Romantic. Plastic. Slightly Unreal.</p>
-  </section>
+  <main class="container">
+    <section class="hero">
+      <div class="hero__text">
+        <p class="eyebrow">Independent label</p>
+        <h1 class="hero__title">Indie Dance / Melodic Italo</h1>
+        <p class="hero__sub">
+          Romantic intent, plastic sheen, slightly unreal.
+        </p>
 
-  <footer>
-    <p>© 2026 KITSCH</p>
-  </footer>
+        <div class="hero__actions">
+          <a class="btn" href="releases.html">Browse releases</a>
+          <a class="btn btn--ghost" href="artists.html">Meet the roster</a>
+        </div>
+      </div>
+    </section>
 
+    <section class="section">
+      <div class="section__head">
+        <h2 class="section__title">Featured</h2>
+        <a class="section__link" href="artists.html">View all artists →</a>
+      </div>
+
+      <a class="feature" href="artists.html#port-manteau">
+        <img class="feature__img" src="images/port-manteau.jpg" alt="Port Manteau in the studio" />
+        <div class="feature__overlay">
+          <div class="tag">Artist</div>
+          <h3 class="feature__title">Port Manteau</h3>
+          <p class="feature__meta">Indie dance structures with melodic Italo intent.</p>
+          <span class="feature__cta">Open artist →</span>
+        </div>
+      </a>
+    </section>
+
+    <section class="section">
+      <div class="section__head">
+        <h2 class="section__title">Latest drops</h2>
+        <a class="section__link" href="releases.html">All releases →</a>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <div class="card__top">
+            <div class="tag tag--outline">KITSCH001</div>
+            <div class="card__date">Coming soon</div>
+          </div>
+          <h3 class="card__title">(Release title)</h3>
+          <p class="card__body">Vinyl / digital. Add a one-liner that reads like a press blurb.</p>
+          <div class="card__actions">
+            <a class="btn btn--small" href="releases.html">Details</a>
+            <a class="btn btn--small btn--ghost" href="contact.html">Promo</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__top">
+            <div class="tag tag--outline">Playlist</div>
+            <div class="card__date">Always on</div>
+          </div>
+          <h3 class="card__title">KITSCH Radio</h3>
+          <p class="card__body">Link Spotify/Apple/YouTube playlist when ready.</p>
+          <div class="card__actions">
+            <a class="btn btn--small" href="contact.html">Send link</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__top">
+            <div class="tag tag--outline">Mailing list</div>
+            <div class="card__date">No spam</div>
+          </div>
+          <h3 class="card__title">Only drops</h3>
+          <p class="card__body">Add Mailchimp/ConvertKit embed later; keep it minimal for now.</p>
+          <div class="card__actions">
+            <a class="btn btn--small" href="contact.html">Contact</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__left">
+          <div class="footer__mark">KITSCH</div>
+          <div class="footer__muted">Indie Dance / Melodic Italo</div>
+        </div>
+
+        <div class="footer__right">
+          <a class="footer__link" href="contact.html">Email</a>
+          <a class="footer__link" href="#" aria-label="Instagram">Instagram</a>
+          <a class="footer__link" href="#" aria-label="SoundCloud">SoundCloud</a>
+        </div>
+      </div>
+      <div class="footer__bottom">© <span id="year"></span> KITSCH</div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
