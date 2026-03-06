@@ -14,7 +14,23 @@
   overflow: hidden;
 }
 
+.bio__media--two{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
+.bio__media--two .bio__img{
+  height: 320px;
+}
+
+@media (max-width: 980px){
+  .bio__media--two{
+    grid-template-columns: 1fr;
+  }
+  .bio__media--two .bio__img{
+    height: 360px;
+  }
+}
 
 
 
