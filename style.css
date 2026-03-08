@@ -1,17 +1,24 @@
 /* Subtle background mark */
 .bg-mark {
   position: absolute;
-  right: -120px;
-  top: -140px;
-  width: min(520px, 70vw);
+  right: -80px;
+  top: -80px;
+  width: min(420px, 60vw);
   opacity: 0.10;
   pointer-events: none;
-  filter: blur(0.2px);
 }
 
 .hero__text--marked{
   position: relative;
   overflow: hidden;
+}
+
+.hero__text--marked .eyebrow,
+.hero__text--marked .hero__title,
+.hero__text--marked .hero__sub,
+.hero__text--marked .hero__actions {
+  position: relative;
+  z-index: 1;
 }
 
 .bio__media--two{
@@ -23,43 +30,13 @@
   height: 320px;
 }
 
-@media (max-width: 980px){
-  .bio__media--two{
-    grid-template-columns: 1fr;
-  }
-  .bio__media--two .bio__img{
-    height: 360px;
-  }
-}
-
-.feature__img,
-.artistcard__img {
-  transition: transform 0.4s ease;
-}
-
-.feature:hover .feature__img,
-.artistcard:hover .artistcard__img {
-  transform: scale(1.05);
-}
-
-.btn:hover{
-  border-color: var(--accent);
-  color: var(--accent);
-  transform: translateY(-1px);
-  box-shadow: 0 0 12px rgba(89,201,165,0.25);
-}
-
 :root{
   --bg: #0a0a0b;
   --panel: rgba(255,255,255,0.03);
   --fg: rgba(255,255,255,0.92);
   --muted: rgba(255,255,255,0.62);
   --line: rgba(255,255,255,0.10);
-
-  /* If you’re using the mint wordmark, keep this mint.
-     If you switch to purple wordmark, set --accent to a purple tone. */
   --accent: #59c9a5;
-
   --radius: 18px;
 }
 
@@ -69,15 +46,18 @@ html, body{ height: 100%; }
 
 body{
   margin: 0;
-  background: radial-gradient(1200px 700px at 10% 0%, rgba(89,201,165,0.12), transparent 60%),
-              radial-gradient(1000px 600px at 90% 10%, rgba(89,201,165,0.08), transparent 55%),
-              var(--bg);
+  background:
+    radial-gradient(1200px 700px at 10% 0%, rgba(89,201,165,0.12), transparent 60%),
+    radial-gradient(1000px 600px at 90% 10%, rgba(89,201,165,0.08), transparent 55%),
+    var(--bg);
   color: var(--fg);
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
   letter-spacing: 0.01em;
 }
 
-a{ color: inherit; }
+a{
+  color: inherit;
+}
 
 .container{
   width: min(1160px, calc(100% - 56px));
@@ -205,7 +185,10 @@ a{ color: inherit; }
   font-weight: 700;
   transition: color 160ms ease;
 }
-.section__link:hover{ color: var(--accent); }
+
+.section__link:hover{
+  color: var(--accent);
+}
 
 /* Tags */
 .tag{
@@ -241,13 +224,14 @@ a{ color: inherit; }
   color: var(--fg);
   font-weight: 800;
   text-decoration: none;
-  transition: transform 140ms ease, border 160ms ease, color 160ms ease, background 160ms ease;
+  transition: transform 140ms ease, border 160ms ease, color 160ms ease, background 160ms ease, box-shadow 160ms ease;
 }
 
 .btn:hover{
-  border-color: rgba(255,255,255,0.24);
+  border-color: var(--accent);
   color: var(--accent);
   transform: translateY(-1px);
+  box-shadow: 0 0 12px rgba(89,201,165,0.25);
 }
 
 .btn--ghost{
@@ -281,7 +265,9 @@ a{ color: inherit; }
   transition: transform 220ms ease;
 }
 
-.feature:hover .feature__img{ transform: scale(1.04); }
+.feature:hover .feature__img{
+  transform: scale(1.04);
+}
 
 .feature__overlay{
   position: absolute;
@@ -311,7 +297,10 @@ a{ color: inherit; }
   font-weight: 900;
   color: rgba(255,255,255,0.92);
 }
-.feature:hover .feature__cta{ color: var(--accent); }
+
+.feature:hover .feature__cta{
+  color: var(--accent);
+}
 
 /* Grid + cards */
 .grid{
@@ -362,10 +351,12 @@ a{ color: inherit; }
 .pagehead{
   padding: 18px 0 6px;
 }
+
 .pagehead__title{
   margin: 0;
   font-size: clamp(28px, 4vw, 48px);
 }
+
 .pagehead__sub{
   margin: 10px 0 0;
   color: var(--muted);
@@ -395,7 +386,9 @@ a{ color: inherit; }
   transition: transform 220ms ease;
 }
 
-.artistcard:hover .artistcard__img{ transform: scale(1.04); }
+.artistcard:hover .artistcard__img{
+  transform: scale(1.04);
+}
 
 .artistcard__overlay{
   position: absolute;
@@ -501,7 +494,10 @@ a{ color: inherit; }
   text-decoration: none;
   font-weight: 800;
 }
-.footer__link:hover{ color: var(--accent); }
+
+.footer__link:hover{
+  color: var(--accent);
+}
 
 .footer__bottom{
   margin-top: 14px;
@@ -512,10 +508,29 @@ a{ color: inherit; }
 
 /* Responsive */
 @media (max-width: 980px){
-  .grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .grid--artists{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .bio{ grid-template-columns: 1fr; }
-  .bio__img{ height: 380px; }
+  .grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid--artists{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .bio{
+    grid-template-columns: 1fr;
+  }
+
+  .bio__img{
+    height: 380px;
+  }
+
+  .bio__media--two{
+    grid-template-columns: 1fr;
+  }
+
+  .bio__media--two .bio__img{
+    height: 360px;
+  }
 }
 
 @media (max-width: 720px){
@@ -524,14 +539,35 @@ a{ color: inherit; }
     align-items: flex-start;
     padding: 14px 0;
   }
-  .brand__wordmark{ height: 34px; }
+
+  .brand__wordmark{
+    height: 34px;
+  }
 
   .container{
     width: min(1160px, calc(100% - 32px));
   }
 
-  .grid{ grid-template-columns: 1fr; }
-  .grid--artists{ grid-template-columns: 1fr; }
-  .feature__img{ height: 52vh; }
-  .artistcard__img{ height: 300px; }
+  .grid{
+    grid-template-columns: 1fr;
+  }
+
+  .grid--artists{
+    grid-template-columns: 1fr;
+  }
+
+  .feature__img{
+    height: 52vh;
+  }
+
+  .artistcard__img{
+    height: 300px;
+  }
+
+  .bg-mark{
+    right: -40px;
+    top: -20px;
+    width: 220px;
+    opacity: 0.14;
+  }
 }
