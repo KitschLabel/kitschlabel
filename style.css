@@ -82,12 +82,12 @@ a{
   align-items: center;
   justify-content: space-between;
   gap: 22px;
-  padding: 16px 0;
+  padding: 18px 0;
 }
 
 .brand__wordmark{
   display: block;
-  height: 44px;
+  height: 32px;
   width: auto;
 }
 
