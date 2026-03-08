@@ -274,6 +274,7 @@ a{ color: inherit; }
   width: 100%;
   height: min(70vh, 620px);
   object-fit: cover;
+  object-position: center 20%;
   display: block;
   filter: contrast(1.05) saturate(1.03);
   transform: scale(1.01);
