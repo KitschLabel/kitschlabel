@@ -272,7 +272,7 @@ a{ color: inherit; }
 
 .feature__img{
   width: 100%;
-  height: min(64vh, 560px);
+  height: min(70vh, 620px);
   object-fit: cover;
   display: block;
   filter: contrast(1.05) saturate(1.03);
