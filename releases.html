@@ -1,41 +1,106 @@
-<section class="section">
-  <div class="release-grid">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Releases — KITSCH</title>
+  <meta name="description" content="KITSCH releases — Indie dance and melodic Italo tracks from Port Manteau and more." />
 
-    <article id="mandala-apophis" class="release-card">
-      <img class="release-card__img" src="images/mandala-apophis.jpg" alt="Mandala / Apophis artwork" />
-      <div class="release-card__body">
-        <div class="tag tag--outline">KITSCH001</div>
-        <h3 class="release-card__title">Mandala / Apophis</h3>
-        <p class="release-card__artist">Port Manteau</p>
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Releases — KITSCH" />
+  <meta property="og:description" content="Explore indie dance and melodic Italo releases from KITSCH." />
+  <meta property="og:image" content="images/mandala-apophis.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="[yourdomain.com](https://yourdomain.com/releases.html)" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <a class="brand" href="index.html" aria-label="KITSCH Home">
+        <img class="brand__wordmark" src="images/kitsch-wordmark.png" alt="KITSCH" />
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link" href="artists.html">Artists</a>
+        <a class="nav__link" href="releases.html" aria-current="page">Releases</a>
+        <a class="nav__link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="pagehead">
+      <p class="eyebrow">Catalogue</p>
+      <h1 class="pagehead__title">Releases</h1>
+      <p class="pagehead__sub">Indie Dance / Melodic Italo from KITSCH artists.</p>
+    </section>
+
+    <section class="section">
+      <div class="release-grid">
+
+        <article id="mandala-apophis" class="release-card">
+          <img class="release-card__img" src="images/mandala-apophis.jpg" alt="Mandala / Apophis artwork" loading="lazy" />
+          <div class="release-card__body">
+            <div class="tag tag--outline">KITSCH001</div>
+            <h3 class="release-card__title">Mandala / Apophis</h3>
+            <p class="release-card__artist">Port Manteau</p>
+          </div>
+        </article>
+
+        <article id="do-you-feel-me-bazaar" class="release-card">
+          <img class="release-card__img" src="images/do-you-feel-me-bazaar.jpg" alt="Do You Feel Me? / Bazaar artwork" loading="lazy" />
+          <div class="release-card__body">
+            <div class="tag tag--outline">KITSCH002</div>
+            <h3 class="release-card__title">Do You Feel Me? / Bazaar</h3>
+            <p class="release-card__artist">Port Manteau</p>
+          </div>
+        </article>
+
+        <article id="metis-arp-attack" class="release-card">
+          <img class="release-card__img" src="images/metis-arp-attack.jpg" alt="Metis / Arp Attack artwork" loading="lazy" />
+          <div class="release-card__body">
+            <div class="tag tag--outline">KITSCH003</div>
+            <h3 class="release-card__title">Metis / Arp Attack</h3>
+            <p class="release-card__artist">Port Manteau</p>
+          </div>
+        </article>
+
+        <article id="glasgow-kiss-tripwire" class="release-card">
+          <img class="release-card__img" src="images/glasgow-kiss-tripwire.png" alt="Glasgow Kiss / Tripwire artwork" loading="lazy" />
+          <div class="release-card__body">
+            <div class="tag tag--outline">KITSCH004</div>
+            <h3 class="release-card__title">Glasgow Kiss / Tripwire</h3>
+            <p class="release-card__artist">Port Manteau</p>
+          </div>
+        </article>
+
       </div>
-    </article>
+    </section>
+  </main>
 
-    <article id="do-you-feel-me-bazaar" class="release-card">
-      <img class="release-card__img" src="images/do-you-feel-me-bazaar.jpg" alt="Do You Feel Me? / Bazaar artwork" />
-      <div class="release-card__body">
-        <div class="tag tag--outline">KITSCH002</div>
-        <h3 class="release-card__title">Do You Feel Me? / Bazaar</h3>
-        <p class="release-card__artist">Port Manteau</p>
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__left">
+        <div class="footer__mark">KITSCH</div>
+        <div class="footer__muted">Indie Dance / Melodic Italo</div>
       </div>
-    </article>
 
-    <article id="metis-arp-attack" class="release-card">
-      <img class="release-card__img" src="images/metis-arp-attack.jpg" alt="Metis / Arp Attack artwork" />
-      <div class="release-card__body">
-        <div class="tag tag--outline">KITSCH003</div>
-        <h3 class="release-card__title">Metis / Arp Attack</h3>
-        <p class="release-card__artist">Port Manteau</p>
+      <div class="footer__right">
+        <a class="footer__link" href="contact.html">Email</a>
+        <a class="footer__link" href="#" aria-label="KITSCH on Instagram">Instagram</a>
+        <a class="footer__link" href="#" aria-label="KITSCH on SoundCloud">SoundCloud</a>
       </div>
-    </article>
+    </div>
+    <div class="footer__bottom">© <span id="year"></span> KITSCH</div>
+  </footer>
 
-    <article id="glasgow-kiss-tripwire" class="release-card">
-      <img class="release-card__img" src="images/glasgow-kiss-tripwire.png" alt="Glasgow Kiss / Tripwire artwork" />
-      <div class="release-card__body">
-        <div class="tag tag--outline">KITSCH004</div>
-        <h3 class="release-card__title">Glasgow Kiss / Tripwire</h3>
-        <p class="release-card__artist">Port Manteau</p>
-      </div>
-    </article>
-
-  </div>
-</section>
+  <script src="main.js" defer></script>
+</body>
+</html>
