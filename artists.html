@@ -1,10 +1,23 @@
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Artists — KITSCH</title>
-  <meta name="description" content="Artists on KITSCH." />
+  <meta name="description" content="Discover artists on KITSCH: Indie dance and melodic Italo music." />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Artists — KITSCH" />
+  <meta property="og:description" content="Discover artists on KITSCH: Indie dance and melodic Italo music." />
+  <meta property="og:image" content="images/port-manteau.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="[yourdomain.com](https://yourdomain.com/artists.html)" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -16,7 +29,7 @@
       </a>
 
       <nav class="nav" aria-label="Primary">
-        <a class="nav__link nav__link--active" href="artists.html">Artists</a>
+        <a class="nav__link" href="artists.html" aria-current="page">Artists</a>
         <a class="nav__link" href="releases.html">Releases</a>
         <a class="nav__link" href="contact.html">Contact</a>
       </nav>
@@ -32,12 +45,17 @@
 
     <section class="section">
       <div class="grid grid--artists">
-        <a class="artistcard" href="#port-manteau" aria-label="Port Manteau">
-          <img class="artistcard__img" src="images/port-manteau-2.jpg" alt="Port Manteau" />
+        <a class="artistcard" href="#port-manteau" aria-label="View Port Manteau details">
+          <img
+            class="artistcard__img"
+            src="images/port-manteau-2.jpg"
+            alt="Port Manteau artist portrait"
+            loading="lazy"
+          />
           <div class="artistcard__overlay">
             <div class="tag">Artist</div>
             <div class="artistcard__name">Port Manteau</div>
-            <div class="artistcard__meta">Indie dance / melodic Italo</div>
+            <div class="artistcard__meta">Indie Dance / Melodic Italo</div>
           </div>
         </a>
       </div>
@@ -51,48 +69,89 @@
 
       <div class="bio">
         <div class="bio__media bio__media--two">
-          <img class="bio__img" src="images/port-manteau.jpg" alt="Port Manteau in the studio" />
-          <img class="bio__img" src="images/port-manteau-2.jpg" alt="Port Manteau in the studio alternate portrait" />
+          <img
+            class="bio__img"
+            src="images/port-manteau.jpg"
+            alt="Port Manteau in the studio"
+            loading="lazy"
+          />
+          <img
+            class="bio__img"
+            src="images/port-manteau-2.jpg"
+            alt="Port Manteau alternate portrait in studio"
+            loading="lazy"
+          />
         </div>
 
         <div class="bio__text">
           <div class="tag tag--outline">KITSCH artist</div>
           <h3 class="bio__title">Romantic machinery.</h3>
           <p class="bio__p">
-            Port Manteau explores indie dance structures with melodic Italo intent — balancing warmth, rhythm and a studio-led sense of atmosphere.
+            Port Manteau explores indie dance structures with melodic Italo intent — balancing warmth,
+            rhythm, and a studio-led sense of atmosphere.
           </p>
           <p class="bio__p">
-            The KITSCH aesthetic sits somewhere between sincerity and gloss: emotional, slightly ironic, and built for late-night movement.
+            The KITSCH aesthetic sits somewhere between sincerity and gloss: emotional, slightly ironic,
+            and built for late-night movement.
           </p>
 
           <div class="bio__links">
-            <a class="btn btn--small" href="#" target="_blank" rel="noreferrer">Spotify</a>
-            <a class="btn btn--small btn--ghost" href="#" target="_blank" rel="noreferrer">SoundCloud</a>
-            <a class="btn btn--small btn--ghost" href="#" target="_blank" rel="noreferrer">Instagram</a>
+            <a
+              class="btn btn--small"
+              href="#"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Port Manteau on Spotify"
+              >Spotify</a
+            >
+            <a
+              class="btn btn--small btn--ghost"
+              href="#"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Port Manteau on SoundCloud"
+              >SoundCloud</a
+            >
+            <a
+              class="btn btn--small btn--ghost"
+              href="#"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Port Manteau on Instagram"
+              >Instagram</a
+            >
           </div>
         </div>
       </div>
     </section>
-
-    <footer class="footer">
-      <div class="footer__inner">
-        <div class="footer__left">
-          <div class="footer__mark">KITSCH</div>
-          <div class="footer__muted">Indie Dance / Melodic Italo</div>
-        </div>
-
-        <div class="footer__right">
-          <a class="footer__link" href="contact.html">Email</a>
-          <a class="footer__link" href="#" aria-label="Instagram">Instagram</a>
-          <a class="footer__link" href="#" aria-label="SoundCloud">SoundCloud</a>
-        </div>
-      </div>
-      <div class="footer__bottom">© <span id="year"></span> KITSCH</div>
-    </footer>
   </main>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__left">
+        <div class="footer__mark">KITSCH</div>
+        <div class="footer__muted">Indie Dance / Melodic Italo</div>
+      </div>
+
+      <div class="footer__right">
+        <a class="footer__link" href="contact.html">Email</a>
+        <a
+          class="footer__link"
+          href="#"
+          aria-label="KITSCH on Instagram"
+          >Instagram</a
+        >
+        <a
+          class="footer__link"
+          href="#"
+          aria-label="KITSCH on SoundCloud"
+          >SoundCloud</a
+        >
+      </div>
+    </div>
+    <div class="footer__bottom">© <span id="year"></span> KITSCH</div>
+  </footer>
+
+  <script src="main.js" defer></script>
 </body>
 </html>
