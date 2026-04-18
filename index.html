@@ -4,7 +4,19 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>KITSCH — Indie Dance / Melodic Italo</title>
-  <meta name="description" content="KITSCH — Indie dance / melodic Italo. Slightly ironic." />
+  <meta name="description" content="KITSCH — Indie dance and melodic Italo. Romantic intent, plastic sheen, slightly unreal." />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="KITSCH — Indie Dance / Melodic Italo" />
+  <meta property="og:description" content="Independent label combining romantic intent and plastic sheen. Indie Dance / Melodic Italo." />
+  <meta property="og:image" content="images/kitsch-logo.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="[yourdomain.com](https://yourdomain.com/)" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -26,12 +38,10 @@
   <main class="container">
     <section class="hero">
       <div class="hero__text hero__text--marked">
-        <img class="bg-mark" src="images/kitsch-logo.png" alt="" aria-hidden="true">
+        <img class="bg-mark" src="images/kitsch-logo.png" alt="" aria-hidden="true" loading="lazy" />
         <p class="eyebrow">Independent label</p>
         <h1 class="hero__title">Indie Dance / Melodic Italo</h1>
-        <p class="hero__sub">
-          Romantic intent, plastic sheen, slightly unreal.
-        </p>
+        <p class="hero__sub">Romantic intent, plastic sheen, slightly unreal.</p>
 
         <div class="hero__actions">
           <a class="btn" href="releases.html">Browse releases</a>
@@ -46,8 +56,13 @@
         <a class="section__link" href="artists.html">View all artists →</a>
       </div>
 
-      <a class="feature" href="artists.html#port-manteau">
-        <img class="feature__img" src="images/port-manteau-landscape.jpg" alt="Port Manteau in the studio" />
+      <a class="feature" href="artists.html#port-manteau" aria-label="View artist Port Manteau">
+        <img
+          class="feature__img"
+          src="images/port-manteau-landscape.jpg"
+          alt="Port Manteau in the studio"
+          loading="lazy"
+        />
         <div class="feature__overlay">
           <div class="tag">Artist</div>
           <h3 class="feature__title">Port Manteau</h3>
@@ -64,8 +79,8 @@
       </div>
 
       <div class="release-grid">
-        <a class="release-card" href="releases.html#mandala-apophis">
-          <img class="release-card__img" src="images/mandala-apophis.jpg" alt="Mandala / Apophis artwork" />
+        <a class="release-card" href="releases.html#mandala-apophis" aria-label="Open release Mandala / Apophis">
+          <img class="release-card__img" src="images/mandala-apophis.jpg" alt="Mandala / Apophis artwork" loading="lazy" />
           <div class="release-card__body">
             <div class="tag tag--outline">KITSCH001</div>
             <h3 class="release-card__title">Mandala / Apophis</h3>
@@ -73,8 +88,8 @@
           </div>
         </a>
 
-        <a class="release-card" href="releases.html#do-you-feel-me-bazaar">
-          <img class="release-card__img" src="images/do-you-feel-me-bazaar.jpg" alt="Do You Feel Me? / Bazaar artwork" />
+        <a class="release-card" href="releases.html#do-you-feel-me-bazaar" aria-label="Open release Do You Feel Me? / Bazaar">
+          <img class="release-card__img" src="images/do-you-feel-me-bazaar.jpg" alt="Do You Feel Me? / Bazaar artwork" loading="lazy" />
           <div class="release-card__body">
             <div class="tag tag--outline">KITSCH002</div>
             <h3 class="release-card__title">Do You Feel Me? / Bazaar</h3>
@@ -82,8 +97,8 @@
           </div>
         </a>
 
-        <a class="release-card" href="releases.html#metis-arp-attack">
-          <img class="release-card__img" src="images/metis-arp-attack.jpg" alt="Metis / Arp Attack artwork" />
+        <a class="release-card" href="releases.html#metis-arp-attack" aria-label="Open release Metis / Arp Attack">
+          <img class="release-card__img" src="images/metis-arp-attack.jpg" alt="Metis / Arp Attack artwork" loading="lazy" />
           <div class="release-card__body">
             <div class="tag tag--outline">KITSCH003</div>
             <h3 class="release-card__title">Metis / Arp Attack</h3>
@@ -91,8 +106,8 @@
           </div>
         </a>
 
-        <a class="release-card" href="releases.html#glasgow-kiss-tripwire">
-          <img class="release-card__img" src="images/glasgow-kiss-tripwire.png" alt="Glasgow Kiss / Tripwire artwork" />
+        <a class="release-card" href="releases.html#glasgow-kiss-tripwire" aria-label="Open release Glasgow Kiss / Tripwire">
+          <img class="release-card__img" src="images/glasgow-kiss-tripwire.png" alt="Glasgow Kiss / Tripwire artwork" loading="lazy" />
           <div class="release-card__body">
             <div class="tag tag--outline">KITSCH004</div>
             <h3 class="release-card__title">Glasgow Kiss / Tripwire</h3>
@@ -101,26 +116,24 @@
         </a>
       </div>
     </section>
-
-    <footer class="footer">
-      <div class="footer__inner">
-        <div class="footer__left">
-          <div class="footer__mark">KITSCH</div>
-          <div class="footer__muted">Indie Dance / Melodic Italo</div>
-        </div>
-
-        <div class="footer__right">
-          <a class="footer__link" href="contact.html">Email</a>
-          <a class="footer__link" href="#" aria-label="Instagram">Instagram</a>
-          <a class="footer__link" href="#" aria-label="SoundCloud">SoundCloud</a>
-        </div>
-      </div>
-      <div class="footer__bottom">© <span id="year"></span> KITSCH</div>
-    </footer>
   </main>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__left">
+        <div class="footer__mark">KITSCH</div>
+        <div class="footer__muted">Indie Dance / Melodic Italo</div>
+      </div>
+
+      <div class="footer__right">
+        <a class="footer__link" href="contact.html">Email</a>
+        <a class="footer__link" href="#" aria-label="KITSCH on Instagram">Instagram</a>
+        <a class="footer__link" href="#" aria-label="KITSCH on SoundCloud">SoundCloud</a>
+      </div>
+    </div>
+    <div class="footer__bottom">© <span id="year"></span> KITSCH</div>
+  </footer>
+
+  <script src="main.js" defer></script>
 </body>
 </html>
