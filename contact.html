@@ -1,13 +1,72 @@
 <!doctype html>
-<html><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
-<title>Coming soon — KITSCH</title>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — KITSCH</title>
+  <meta name="description" content="Get in touch with KITSCH — indie dance and melodic Italo label. Booking, promo, and inquiries." />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Contact — KITSCH" />
+  <meta property="og:description" content="Contact KITSCH for bookings, collaborations, or press inquiries." />
+  <meta property="og:image" content="images/kitsch-logo.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="[yourdomain.com](https://yourdomain.com/contact.html)" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <header class="header">
+    <div class="header__inner">
+      <a class="brand" href="index.html" aria-label="KITSCH Home">
+        <img class="brand__wordmark" src="images/kitsch-wordmark.png" alt="KITSCH" />
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link" href="artists.html">Artists</a>
+        <a class="nav__link" href="releases.html">Releases</a>
+        <a class="nav__link" href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
   <main class="container">
-    <p class="eyebrow">KITSCH</p>
-    <h1>Coming soon</h1>
-    <p style="color: rgba(255,255,255,0.62);">Back to <a href="index.html">home</a>.</p>
+    <section class="pagehead">
+      <p class="eyebrow">KITSCH</p>
+      <h1 class="pagehead__title">Contact</h1>
+      <p class="pagehead__sub">Bookings, promo, and general inquiries.</p>
+    </section>
+
+    <section class="section section--centered">
+      <p style="color: rgba(255,255,255,0.65)">
+        This page is coming soon. For now, reach us via
+        <a href="mailto:hello@kitsch.example" class="link">email</a>
+        or head back <a href="index.html" class="link">home</a>.
+      </p>
+    </section>
   </main>
-</body></html>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__left">
+        <div class="footer__mark">KITSCH</div>
+        <div class="footer__muted">Indie Dance / Melodic Italo</div>
+      </div>
+
+      <div class="footer__right">
+        <a class="footer__link" href="contact.html" aria-current="page">Email</a>
+        <a class="footer__link" href="#" aria-label="KITSCH on Instagram">Instagram</a>
+        <a class="footer__link" href="#" aria-label="KITSCH on SoundCloud">SoundCloud</a>
+      </div>
+    </div>
+    <div class="footer__bottom">© <span id="year"></span> KITSCH</div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
